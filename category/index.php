@@ -1,6 +1,6 @@
 <?php
     require_once "pdo.php";
-    $category = getData();
+    $categories = getALL();
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,6 @@
         <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">STT</th>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Action</th>
@@ -27,14 +26,13 @@
         <tbody>
             <?php 
                 $stt = 1;
-                foreach($category as $value): ?>
+                foreach($categories as $value): ?>
             <tr>
-                <td><?= $stt++; ?></td>
                 <td><?= $value['id'];?></td>
                 <td><?= $value['name'];?></td>
                 <td>
                     <form id="delete_<?= $value['id'] ?>" action="delete.php" method="POST" style="display:flex">
-                        <a href="./edit.php?id=<?= $value['id']?>" class="btn btn-dark" style="margin-right: 5px">Edit</a>
+                        <a href="./update.php?id=<?= $value['id']?>" class="btn btn-dark" style="margin-right: 5px">Update</a>
                         <input type="hidden" value="<?= $value['id'] ?>" name="id">
                         <a class="btn btn-dark" onclick="confirmDelete(<?= $value['id'] ?>)">Delete</a>
                     </form>
