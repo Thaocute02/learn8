@@ -14,7 +14,7 @@
             $data = [
                 'id' => $_GET['id']
             ];
-            $value = getOneData($data)['0'];
+            $value = getALL($data)['0'];
         ?>
         <form action="./action.php?id=<?=$data['id'] ?>" method="POST">
         <div class="mb-3">
