@@ -16,7 +16,7 @@
             ];
             $value = getOneData($data)['0'];
         ?>
-        <form action="./action-edit.php?id=<?=$data['id'] ?>" method="POST">
+        <form action="./action.php?id=<?=$data['id'] ?>" method="POST">
         <div class="mb-3">
             <label class="form-label">Name</label>
             <input type="text" class="form-control" name="name" value="<?= $value['name']; ?>">
