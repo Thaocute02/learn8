@@ -32,9 +32,9 @@
                 <td><?= $value['name'];?></td>
                 <td>
                     <form id="delete_<?= $value['id'] ?>" action="delete.php" method="POST" style="display:flex">
-                        <a href="./update.php?id=<?= $value['id']?>" class="btn btn-dark" style="margin-right: 5px">Update</a>
+                        <a href="./update.php?id=<?= $value['id']?>" class="btn btn-info" style="margin-right: 5px">Update</a>
                         <input type="hidden" value="<?= $value['id'] ?>" name="id">
-                        <a class="btn btn-dark" onclick="confirmDelete(<?= $value['id'] ?>)">Delete</a>
+                        <a class="btn btn-danger" onclick="confirmDelete(<?= $value['id'] ?>)">Delete</a>
                     </form>
                 </td>
             </tr>
