@@ -33,6 +33,11 @@ function create($data)
     $stmt = prepareSQL($sql);
     $stmt->execute($data);
 }
+function update($data){
+    $sql = "UPDATE categories SET name = :name WHERE id = :id";
+    $update = prepareSQL($sql);
+    $update->execute($data);
+}
 
 function delete($data)
 {
