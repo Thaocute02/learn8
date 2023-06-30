@@ -2,7 +2,7 @@
     require_once "pdo.php";
     $categories = getALL();
     require_once "../category/pdo.php";
-    $prod = getProdData();
+    $prod = getProData();
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
-            <th scope="col">Caterory</th>
+            <th scope="col">Categories</th>
             <th scope="col">Action</th>
             </tr>
         </thead>
