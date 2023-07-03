@@ -2,7 +2,7 @@
 
 $DB_TYPE = 'mysql';
 $DB_HOST = 'localhost';
-$DB_NAME = 'cate';
+$DB_NAME = 'category';
 $DB_USER = 'root';
 $DB_PASS = '';
 
