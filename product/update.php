@@ -13,27 +13,27 @@
         <a href="index.php" class="btn" style="margin-right: 5px"> < Back</a>
         <h3>Update Product</h3>
         <?php 
-            $prodId = [
+            $proid = [
                 'id' => $_GET['id']
             ];
-            $prodArr = getOneProdData($prodId)[0];
-            $cateId = [
-                'id' => $prodArr['cateId']
+            $prodArr = getOneProdData($proid)[0];
+            $cateid = [
+                'id' => $prodArr['cateid']
             ];
-            $cateArr = getOneData($cateId);
+            $cateArr = getOneData($cateid);
         ?>
-        <form action="action-update.php?id=<?=$prodArr['prodId'] ?>" method="POST">
+        <form action="action.php?id=<?=$prodArr['proid'] ?>" method="POST">
         <div class="mb-3">
             <label class="form-label">Name</label>
-            <input required type="text" class="form-control" name="name" value="<?= $prodArr['prodName']?>">
+            <input required type="text" class="form-control" name="name" value="<?= $prodArr['proname']?>">
         </div>
         <div class="mb-3">
             <label class="form-label">Price</label>
-            <input required type="text" class="form-control" name="price" value="<?= $prodArr['prodPrice']?>">
+            <input required type="text" class="form-control" name="price" value="<?= $prodArr['proprice']?>">
         </div>
         <div class="mb-3">
             <label class="form-label">Category</label>
-            <select class="form-select" aria-label="Default select example" name="cateId">
+            <select class="form-select" aria-label="Default select example" name="cateid">
                 <option selected value="<?= $cateArr[0]['id']?>"><?= $cateArr[0]['name']?></option>
                 <?php 
                     foreach($cateArrs as $dataCate)
