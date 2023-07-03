@@ -2,7 +2,7 @@
     require_once "pdo.php";
     $categories = getALL();
     require_once "../category/pdo.php";
-    $prod = getProData();
+    $product= getProData();
 ?>
 
 <!DOCTYPE html>
