@@ -13,7 +13,7 @@
     <div class="container mt-3">
         <div>
             <h3>List Categories</h3>
-            <a href="add.php" class="btn btn-success" style="margin-right: 5px;">Create</a>
+            <a href="create.php" class="btn btn-success" style="margin-right: 5px;">Create</a>
         </div>
         <table class="table table-hover">
         <thead>
